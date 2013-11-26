@@ -23,6 +23,7 @@ $(function(){
 		$(".operations").on("click", "button", function(event){
 			console.log(event.currentTarget)
 			console.log(this)
+			console.log()
 
 		});
 });
