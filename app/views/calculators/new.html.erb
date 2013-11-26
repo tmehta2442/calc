@@ -1,44 +1,68 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-sm-9">
+    <input class="col-xs-6" type="text" id="display" placeholder="entered numbers here">
+    </div>
+    <div class="row">
+      <div class="col-sm-9 qwerty">
         <div class="row">
-          <button class="col-xs-3 btn btn-default">1</button>
-          <button class="col-xs-3 btn btn-default">2</button>
-          <button class="col-xs-3 btn btn-default">3</button>
+          <button class="col-xs-3 btn btn-default" data-num="1">1</button>
+          <button class="col-xs-3 btn btn-default" data-num="2">2</button>
+          <button class="col-xs-3 btn btn-default" data-num="3">3</button>
         </div>
 
         <div class="row">
-          <button class="col-xs-3 btn btn-default">4</button>
-          <button class="col-xs-3 btn btn-default">5</button>
-          <button class="col-xs-3 btn btn-default">6</button>
+          <button class="col-xs-3 btn btn-default" data-num="4">4</button>
+          <button class="col-xs-3 btn btn-default" data-num="5">5</button>
+          <button class="col-xs-3 btn btn-default" data-num="6">6</button>
         </div>
 
         <div class="row"> 
-          <button class="col-xs-3 btn btn-default">7</button>
-          <button class="col-xs-3 btn btn-default">8</button>
-          <button class="col-xs-3 btn btn-default">9</button>
+          <button class="col-xs-3 btn btn-default" data-num="7">7</button>
+          <button class="col-xs-3 btn btn-default" data-num="8">8</button>
+          <button class="col-xs-3 btn btn-default" data-num="9">9</button>
         </div>
 
         <div class="row">  
-          <button class="col-xs-offset-3 col-xs-3 btn btn-default">0</button>
+          <button class="col-xs-offset-3 col-xs-3 btn btn-default" data-num="0">0</button>
         </div>
       </div>
+
       <div class="col-sm-3">
-        <div class="row">
-          <button class="col-xs-6 btn btn-default">+</button>
+        <div class="operations">
+          <div class="row">
+            <button class="col-xs-6 col-xs-offset-6 btn btn-default" data-operation="+">+</button>
+          </div>
+
+          <div class="row">
+            <button class="col-xs-6 col-xs-offset-6 btn btn-default" data-operation="-">-</button>
+          </div>
+
+          <div class="row">
+            <button class="col-xs-6 col-xs-offset-6 btn btn-default" data-operation="x">x</button>
+          </div>
+
+          <div class="row">  
+            <button class="col-xs-6 col-xs-offset-6 btn btn-default" data-operation="/">/</button>
+          </div>
         </div>
 
         <div class="row">
-          <button class="col-xs-6 btn btn-default">-</button>
-        </div>
-
-        <div class="row">
-          <button class="col-xs-6 btn btn-default">x</button>
-        </div>
-
-        <div class="row">  
-          <button class="col-xs-6 btn btn-default">/</button>
+          <form>
+            <!-- params => {:input  => {num1: "2", num2: "3"} }-->
+            <!-- when submit is clicked, the numbers in num1 & num2 will be sent
+            as keys in a hash for input form (:input). Params is the hash accessed 
+            on the back end.-->
+            <input type="text" name="input[num1]" placeholder="num1 here">
+            <input type="text" name="input[operation]" placeholder="operation here">
+            <input type="text" name="input[num2]" placeholder="num2 here">
+            <!-- an operation field is also needed -->
+            <!-- params => {:input => {num1, num2, operation }   } -->
+            <!-- these fields will eventually be made "hidden" and then used for the actual
+            calculation and operation will not be part of the param. AFTER that we will turn to our friend AJAX to do this
+            on the fly -->
+            <button class="col-xs-12 btn btn-default">=</button>
+          </form>
         </div>
       </div>
     </div>
