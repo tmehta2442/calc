@@ -18,7 +18,7 @@ $(function(){
 	$(".numbers").on("click", "button", function(event){
 		var val1 = $currentInput.val();
 
-		$currentInput.val(val1 + $(this).data("num"))
+		//$currentInput.val(val1 + $(this).data("num"))
 		currentInput += $(this).data("num");
 
 		$displayField.val(currentInput);
