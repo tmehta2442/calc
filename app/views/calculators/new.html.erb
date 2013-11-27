@@ -48,7 +48,7 @@
         </div>
 
         <div class="row">
-          <form>
+          <form id="input">
             <!-- params => {:input  => {num1: "2", num2: "3"} }-->
             <!-- when submit is clicked, the numbers in num1 & num2 will be sent
             as keys in a hash for input form (:input). Params is the hash accessed 
@@ -61,7 +61,7 @@
             <!-- these fields will eventually be made "hidden" and then used for the actual
             calculation and operation will not be part of the param. AFTER that we will turn to our friend AJAX to do this
             on the fly -->
-            <button class="col-xs-12 btn btn-default">=</button>
+            <button class="col-xs-12 btn btn-default" id="enter">=</button>
           </form>
         </div>
       </div>
